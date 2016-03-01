@@ -11,7 +11,8 @@
                 scrollBody: '=',
                 scrollStop: '=',
                 scrollableContainer: '=',
-                contentOffset: '='
+                contentOffset: '=',
+                contentZIndex: '='
             },
             link: function(scope, element, attributes, control){
                 var header = $(element, this);
@@ -93,7 +94,7 @@
                     clonedHeader.addClass('fsm-sticky-header');
                     clonedHeader.css({
                         position: 'fixed',
-                        'z-index': 10000,
+                        'z-index': scope.contentZIndex,
                         visibility: 'hidden'
                     });                
                     calculateSize();
