@@ -12,7 +12,8 @@
                 scrollStop: '=',
                 scrollableContainer: '=',
                 contentOffset: '=',
-                contentZIndex: '='
+                contentZIndex: '=',
+                starterZIndex: '='
             },
             link: function(scope, element, attributes, control){
                 var header = $(element, this);
@@ -67,7 +68,7 @@
                                 left: 0,
                                 top: 0,
                                 width: 'auto',
-                                'z-index': 0,
+                                'z-index': scope.starterZIndex,
                                 visibility: 'visible'
                             });
                         }
